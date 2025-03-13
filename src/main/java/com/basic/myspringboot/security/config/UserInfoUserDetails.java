@@ -31,6 +31,7 @@ public class UserInfoUserDetails implements UserDetails {
         return authorities;
     }
 
+    // AuthenticationManager가 인증 처리할 때 사용! 아래 password as password , email as login id
     @Override
     public String getPassword() {
         return password;

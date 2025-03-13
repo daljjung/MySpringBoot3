@@ -22,8 +22,12 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<UserInfo> optionalUserInfo = repository.findByEmail(username);
-        return optionalUserInfo.map(userInfo -> new UserInfoUserDetails(userInfo))
-                //userInfo.map(UserInfoUserDetails::new)
+
+        //긍까 UserInfoUserDetails service에서 UserInfoUserDetails 를 쓴다는거 아니여?!
+        //위에 clss선언에서 implements를 한다는거랑 똑같
+        //return optionalUserInfo.map(userInfo -> new UserInfoUserDetails(userInfo))
+        return optionalUserInfo.map(UserInfoUserDetails::new)
+
                 .orElseThrow(() -> new UsernameNotFoundException("user not found " + username));
 
     }
