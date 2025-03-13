@@ -1,0 +1,9 @@
+/'\_/`\       (  _`\               ( )_  /'_  )
+|     | _   _ | (_) )   _      _   | ,_)(_)_) |
+| (_) |( ) ( )|  _ <' /'_`\  /'_`\ | |   _(_ <
+| | | || (_) || (_) )( (_) )( (_) )| |_ ( )_) |
+(_) (_)`\__, |(____/'`\___/'`\___/'`\__)`\____)
+       ( )_| |
+       `\___/'
+Applicaiont Info :: ${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}
